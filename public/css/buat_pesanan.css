@@ -1,0 +1,55 @@
+/* ================= TAMPILAN HALAMAN UTAMA ================= */
+body { 
+    background-color: #f0f8ff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+}
+header { 
+    background-color: #5ca7f2; 
+    color: white; 
+    padding: 20px 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+header h1 { font-size: 24px; font-weight: 600; }
+.main-container { flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px; }
+.form-box { background-color: white; border: 2px solid #5ca7f2; border-radius: 20px; width: 100%; max-width: 850px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); overflow: hidden; }
+.form-header { background-color: #5ca7f2; color: white; padding: 15px 25px; font-size: 18px; font-weight: bold; display: flex; align-items: center; gap: 15px; }
+.form-header a { color: white; text-decoration: none; font-size: 20px; }
+.form-content { padding: 30px; display: flex; gap: 30px; flex-wrap: wrap; }
+.form-left { flex: 1; min-width: 300px; }
+.form-right { width: 260px; background-color: #e6f2ff; border-radius: 15px; padding: 25px 20px; text-align: center; box-sizing: border-box; height: fit-content; border: 1px dashed #5ca7f2; }
+.section-title { font-weight: bold; color: #4a4a4a; margin-bottom: 12px; font-size: 15px; }
+input, select { width: 100%; padding: 12px 20px; margin-bottom: 15px; border: 2px solid #e0e0e0; border-radius: 25px; box-sizing: border-box; font-size: 14px; outline: none; }
+.kode-display { font-size: 24px; font-weight: bold; color: #333; margin: 10px 0; }
+.form-footer { width: 100%; display: flex; justify-content: space-between; margin-top: 20px; }
+.btn { padding: 12px 35px; border-radius: 25px; border: none; font-weight: bold; font-size: 14px; cursor: pointer; text-decoration: none; text-align: center; }
+.btn-batal { background-color: #ff6b6b; color: white; }
+.btn-simpan { background-color: #5ca7f2; color: white; }
+
+/* ================= MODAL STRUK POP-UP ================= */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 9999; }
+.struk-box { background: white; border: 1px solid #999; width: 380px; padding: 20px; font-family: 'Courier New', Courier, monospace; text-align: center; position: relative; }
+.close-modal { position: absolute; top: 10px; right: 15px; font-size: 22px; cursor: pointer; font-family: sans-serif; font-weight: bold; color: #333; }
+.struk-header h3 { margin: 5px 0; font-size: 16px; }
+.barcode { font-size: 38px; font-family: sans-serif; letter-spacing: 2px; margin: 10px 0; font-weight: bold; }
+.struk-body { background-color: #eaeaea; padding: 15px; text-align: left; border-radius: 5px; margin: 15px 0; }
+.struk-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
+.struk-row span:first-child { font-weight: bold; }
+.btn-print-now { background: #3b31df; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; font-weight: bold; margin-top: 10px; }
+
+/* ================= PRINT MEDIA RULES ================= */
+@media print {
+    body * { visibility: hidden; background: none; }
+    .modal-overlay { display: flex !important; position: absolute; left: 0; top: 0; width: 100%; background: white; }
+    .struk-box { visibility: visible; border: none; width: 100%; position: absolute; left: 0; top: 0; }
+    .struk-box * { visibility: visible; }
+    .close-modal, .btn-print-now { display: none !important; }
+    .struk-body { background-color: #eaeaea !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

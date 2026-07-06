@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafbfe;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pesanan-header {
+    background-color: #5ca7f2;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pesanan-header h2 {
+    margin: 0;
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-container {
+    max-width: 700px;
+    margin: 25px auto 15px auto;
+    padding: 0 20px;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    border: 2px solid #5ca7f2;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.search-box input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #5ca7f2;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background-color: #4592e0;
+}
+
+.status-tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #5ca7f2;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tab-item {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px 30px;
+    flex: 1;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.tab-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-item.active {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-bottom: 4px solid #1a0dab;
+}
+
+.pesanan-container {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.card-pesanan {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    padding: 18px 35px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card-pesanan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-left h3 {
+    margin: 0 0 3px 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+.card-left p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.nama-pelanggan {
+    font-weight: bold;
+}
+
+.card-right {
+    text-align: right;
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    transition: transform 0.1s, opacity 0.2s;
+    text-decoration: none;
+}
+
+.badge-status:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+.status-new     { background-color: #10b981; }
+.status-process { background-color: #3b82f6; }
+.status-success { background-color: #059669; }
+
+.keterangan-laundry {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #6b7280;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #9ca3af;
+    font-style: italic;
+}

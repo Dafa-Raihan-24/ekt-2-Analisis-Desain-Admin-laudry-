@@ -1,0 +1,364 @@
+/* ============================= */
+/* public/css/pesanan.css */
+/* ============================= */
+
+body {
+    background-color: #f0f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.pesanan-header {
+    background-color: #5ca7f2;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pesanan-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pesanan-header h2 {
+    margin: 0;
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+/* ============================= */
+/* Search */
+/* ============================= */
+
+.search-container {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    border: 2px solid #5ca7f2;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    background: #5ca7f2;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ============================= */
+/* Tab */
+/* ============================= */
+
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #718096;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+
+.tab-btn.active {
+    color: #3b31df;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #3b31df;
+    border-radius: 2px;
+}
+
+/* ============================= */
+/* Card Grid */
+/* ============================= */
+
+.cards-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(480px,1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.pesanan-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.03);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: .25s;
+}
+
+.pesanan-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ============================= */
+/* Header Card */
+/* ============================= */
+
+.card-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.laundry-icon-title {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon-box {
+    background: #e6f2ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.meta-user h4 {
+    margin: 0 0 4px;
+    color: #2d3748;
+}
+
+.meta-user p {
+    margin: 0;
+    color: #718096;
+    font-size: 13px;
+}
+
+.kode-tag {
+    background: #edf2f7;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* ============================= */
+/* Detail */
+/* ============================= */
+
+.card-detail-row {
+    display: flex;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.detail-item {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    background: #fafafa;
+}
+
+.detail-item:first-child {
+    border-right: 1px solid #e2e8f0;
+}
+
+.card-time-info {
+    background: #f7fafc;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+}
+
+/* ============================= */
+/* Footer Button */
+/* ============================= */
+
+.card-footer{
+    display:flex;
+    gap:12px;
+    margin-top:18px;
+}
+
+.card-footer .btn{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:48px;
+
+    border-radius:12px;
+
+    font-size:15px;
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+}
+
+.card-footer .btn:hover{
+    transform:translateY(-2px);
+}
+
+/* Update */
+
+.btn-update{
+    background:#4537e8;
+    color:#fff;
+}
+
+/* Cetak */
+
+.btn-print{
+    background:#25b24a;
+    color:#fff;
+}
+
+/* Ubah */
+
+.btn-edit{
+    background:#fff;
+    color:#4537e8;
+    border:2px solid #4537e8;
+}
+
+.btn-edit:hover{
+    background:#4537e8;
+    color:#fff;
+}
+
+.btn-warning:hover{
+    background:#3b31df;
+    color:white;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media(max-width:1000px){
+
+.cards-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.tab-navigation{
+    gap:15px;
+}
+
+.tab-btn{
+    padding:10px;
+    font-size:14px;
+}
+
+.search-box{
+    flex-direction:column;
+}
+
+.search-box button{
+    padding:12px;
+}
+
+}
+
+/* ===== New Footer Buttons ===== */
+.card-footer{
+    display:flex;
+    gap:12px;
+    margin-top:16px;
+}
+.card-footer .btn{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:46px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14px;
+    transition:.25s;
+    box-sizing:border-box;
+}
+.card-footer .btn:hover{
+    transform:translateY(-2px);
+}
+.btn-update{
+    background:#4537e8;
+    color:#fff;
+}
+.btn-update:hover{
+    background:#3427c8;
+}
+.btn-print{
+    background:#28a745;
+    color:#fff;
+}
+.btn-print:hover{
+    background:#218838;
+}
+.btn-edit{
+    background:#fff;
+    color:#4537e8;
+    border:2px solid #4537e8;
+}
+.btn-edit:hover{
+    background:#4537e8;
+    color:#fff;
+}
